@@ -1,0 +1,680 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    background: whitesmoke;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 30px auto;
+}
+
+.title-page{
+    display: flex;
+    justify-content: center;
+    color: rgb(22, 31, 27);
+    font-family: 'Press Start 2P';
+    font-size: 2.25rem;
+}
+
+header p{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-size: 0.85rem;
+    margin: 5px auto;
+    width: 100%;
+}
+
+main{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    justify-content: space-around;
+    align-content: stretch;
+}
+
+.input{
+    position: relative;
+    display: flex;
+    top: auto;
+    flex-basis: 35%;
+    min-width: 300px;
+}
+
+.input-padron{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    resize: none;
+    min-height: 500px;
+    border-radius: 15px;
+    background: rgba(179, 250, 215, 0.3);
+    border: 3px solid rgba(157, 219, 188, 1);
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.indications{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    bottom: 1.5%;
+    margin: 15px;
+    width: 95%;
+    align-content: space-around;
+    align-items: center;
+    background: transparent;
+}
+
+.exclamation-icon{
+    display: flex;
+    margin: 0 5%;
+}
+
+.indications p{
+    display: flex;
+    font-family: 'Roboto Mono';
+    font-size: 0.8rem;
+    background: transparent;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+}
+
+.buttons >button >p{
+    display: flex;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin: 2% auto;
+}
+
+.buttons >button >img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 5% auto auto;
+}
+
+.button-encriptar,
+.button-desencriptar{
+    display: flex;
+    border: none;
+    border-radius: 20px;
+    background:rgba(227, 245, 168, 1) url(lock-closed.webp);
+    min-width: 30%;
+    min-height: 30%;
+    max-width: 97%;
+    max-height: 40%;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-encriptar:hover,
+.button-desencriptar:hover{
+    cursor: pointer;
+}
+
+.output{
+    position: relative;
+    display: flex;
+    top: auto;
+    align-items: center;
+    flex-basis: 35%;
+    min-width: 300px;
+}
+
+.output-padron{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    width: 100%;
+    padding: 15px;
+    resize: none;
+    border-radius: 15px;
+    text-align: justify;
+    border: none;
+    background: rgba(179, 250, 215, 0.6);
+    z-index: 1;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.default-output{
+    position: absolute;
+    display: flex;
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Mono';
+}
+
+.default-output img{
+    width: 35%;
+    height: auto;
+    margin: 0 0 6px 0;
+    background: transparent;
+}
+
+.default-output p:first-of-type{
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: transparent;
+}
+
+.default-output p:last-of-type{
+    font-size: 1rem;
+    background: transparent;
+    margin: 6px;
+}
+
+.copy-clipboard{
+    position: absolute;
+    display: flex;
+    border: none;
+    background: transparent;
+    min-width: 30px;
+    z-index: 2;
+    bottom: 3%;
+    right: 3%;
+    margin: 15px;
+    width: 5%;
+    align-content: space-around;
+    align-items: center;
+}
+
+.copy-icon{
+    display: inline;
+    width: 100%;
+    height: 100%;
+}
+
+.copy-icon:hover{
+    cursor: pointer;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 10px;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    background-color: rgba(1, 47, 41, 1);
+    font-family: 'Roboto Mono';
+    color: rgba(255, 255, 255, 1);
+    flex-direction: row;
+}
+
+footer h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-align: center;
+    margin: 2%;
+}
+
+.footer-1{
+    position: relative;
+    display: flex;
+    margin: 2% auto;
+    flex-direction: column;
+    width: 320px;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+.developer-container{
+    position: relative;
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    z-index: 1;
+}
+
+.developer-container > img{
+    width: 16%;
+    filter: drop-shadow(4px 0px 0 white)
+            drop-shadow(0px 4px 0 white)
+            drop-shadow(-4px 0px 0 white)
+            drop-shadow(0px -4px 0 white);
+}
+
+.developer-container > p{
+    margin: 0 4%;
+    font-size: 1.2rem;
+}
+
+.footer-1-nav{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.contacto-url{
+    display: flex;
+    width: 100%;
+}
+
+.contacto-url >a{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto 3%;
+}
+
+.linkedin-logo{
+    display: flex;
+    margin-right: 10px;
+    width: 8%;
+}
+
+.contacto-url >a >p{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.donation-url{
+    display: flex;
+    width: 100%;
+}
+
+.donation-url >a{
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;    
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto 3%;
+}
+
+.skrill-logo{
+    display: flex;
+    margin-right: 10px;
+    width: 8%;
+}
+
+.donation-url >a >p{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.footer-1-nav > nav > ul li a,
+.footer-1-nav > nav > ul li a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-2{
+    position: relative;
+    display: flex;
+    margin: 2% auto;
+    flex-direction: column;
+    width: 320px;
+    align-items: center;
+}
+
+.acknowlements-urls{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 10% auto 0;
+}
+
+.alura-logo{
+    display: flex;
+    width: 75%;
+}
+
+.one-logo{
+    display: flex;
+    width: 75%;
+    margin: 0 0 0 auto;
+}
+
+.copyright{
+    display: flex;
+    height: fit-content;
+    margin: 5% auto 1.5%;
+    font-size: 0.7rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Pantallas grandes */
+
+@media screen and (min-width: 1025px) {
+    html {
+        font-size: 24px;
+    }
+
+    header p{
+        font-size: 0.75rem;
+    }
+
+    .input-padron{
+        font-size: 0.8rem;
+    }
+
+    .indications p{
+        font-size: 0.5rem;
+    }
+
+    .buttons >button >p{
+        font-size: 0.85rem;
+    }
+
+    .button-encriptar,
+    .button-desencriptar{
+        aspect-ratio: 5/4.5;
+    }
+
+    .output-padron{
+        min-height: 500px;
+        height: auto;
+        overflow-y: auto;
+        font-size: 0.8rem;
+    }
+
+    .default-output p:first-of-type{
+        font-size: 0.9rem;
+    }
+    
+    .default-output p:last-of-type{
+        font-size: 0.6rem;
+    }
+
+    .copy-clipboard{
+        width: 8%;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-1{
+        margin-right: calc(100% - 78%);
+    }
+
+    .footer-2{
+        margin-left: calc(100% - 78%);
+    }
+
+    footer h1{
+        font-size: 1.2rem;
+    }
+
+    .skrill-logo{
+        margin: 3% auto;
+    }
+
+    .developer-container > p{
+    font-size: 0.95rem;
+    }
+
+    .footer-1-nav > nav > ul li a{
+    font-size: 0.75rem;
+    }
+
+    .footer-2{
+        justify-content: space-between;
+    }
+
+    .acknowlements-urls{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 75%;
+        margin: unset;
+    }
+
+    .acknowlements-urls li a{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+    }
+    
+    .alura-logo{
+        display: flex;
+        width: 50%;
+        margin: 10% auto;
+    }
+    
+    .one-logo{
+        display: flex;
+        width: 50%;
+        margin: unset;
+        margin: 10% auto;
+    }
+
+    .copyright{
+        margin: unset;
+        margin: 1% auto 0.3%;
+    }
+    
+}
+
+/* Tabletas */
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    .input,
+    .buttons,
+    .output {
+        width: 96%;
+        margin: 10px 0;
+        flex-basis: unset;
+    }
+
+    .buttons{
+        justify-content: space-around;
+        flex-wrap: nowrap
+    }
+
+    .buttons button img{
+        display: flex;
+        max-width: 25%;
+        margin: auto 2px;
+    }
+
+    .buttons button p{
+        margin: auto 0;
+        font-size: 1.2rem;
+    }
+
+    .button-encriptar,
+    .button-desencriptar{
+        flex-wrap: nowrap;
+        max-width: 45%;
+        max-height: 100%;
+    }
+
+    .output-padron{
+        min-height: 150px;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .default-output img{
+        display: none;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-1{
+        margin-right: calc(100% - 95%);
+    }
+
+    .footer-2{
+        margin-left: calc(100% - 95%);
+    }
+
+    .skrill-logo{
+        margin: 3% auto;
+    }
+
+    .footer-2{
+        justify-content: space-between;
+    }
+
+    .acknowlements-urls{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 75%;
+        margin: unset;
+    }
+
+    .acknowlements-urls li a{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+    }
+    
+    .alura-logo{
+        display: flex;
+        width: 40%;
+        margin: 10% auto;
+    }
+    
+    .one-logo{
+        display: flex;
+        width: 40%;
+        margin: unset;
+        margin: 10% auto;
+    }
+
+    .copyright{
+        margin: unset;
+        margin: 2% auto 0.3%;
+    }
+
+}
+
+/* Celulares */
+
+@media screen and (max-width:767px){
+
+    html {
+        font-size: 13px;
+    }
+
+    header p{
+        font-size: 1rem;
+    }
+
+    .info-page2{
+        display: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      
+    .input,
+    .buttons,
+    .output {
+        width: 96%;
+        margin: 10px 0;
+        flex-basis: unset;
+    }
+
+    .input{
+        min-width: 250px;
+    }
+
+    .buttons{
+        justify-content: space-around;
+        flex-wrap: nowrap
+    }
+
+    .buttons button img{
+        display: flex;
+        max-width: 30%;
+        margin: auto;
+    }
+
+    .buttons button p{
+        margin: auto;
+    }
+
+    .button-encriptar,
+    .button-desencriptar{
+        flex-wrap: nowrap;
+        max-width: 45%;
+        max-height: 100%;
+    }
+
+    .output-padron{
+        min-height: 150px;
+        height: auto;
+        overflow-y: auto; 
+    }
+
+    .default-output img{
+        display: none;
+    }
+
+}

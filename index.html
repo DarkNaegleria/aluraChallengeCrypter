@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>SecretScript: Encriptador de Textos</title> 
+        <link rel="stylesheet" href="css/Style-reset.css">
+        <link rel="stylesheet" href="css/Style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+                <h1 class="title-page">SecretScript</h1>
+                <p class="info-page1">Protege tus conversaciones privadas de miradas indiscretas.</p>
+                <p class="info-page2">Encripta tus textos con facilidad y desencripta cuando lo necesites.</p>
+        </header>
+
+        <main>
+            <div class="input">
+                <textarea cols="70" rows="10" id="inputSentence" class="input-padron" required placeholder="Ingrese su texto..."></textarea>
+                <div class="indications">
+                    <img class="exclamation-icon" src="img/exclamation-icon.webp">
+                    <p>Solo letras minúsculas y sin acentos ortográficos.</p>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="buttonReplace" class="button-encriptar" onclick="replaceSentence()">
+                    <img class="img-crypt" src="img/lock-closed.webp">
+                    <p>Encriptar</p>
+                </button>
+                <button id="buttonDesReplace" class="button-desencriptar" onclick="revertReplaceSentence()">
+                    <img class="img-decrypt" src="img/lock-open.webp">
+                    <p>Desencriptar</p>
+                </button>
+            </div>
+
+            <div class="output">
+                <textarea cols="70" rows="10" id="outputResult" class="output-padron" readonly></textarea>
+                <div class="default-output">
+                    <img class="img-no-text" src="img/no-text.webp">
+                    <p>No encontré ningun texto (Ծ‸ Ծ)</p>
+                    <p>Ingrese por favor su texto</p>
+                </div>
+
+                <button class="copy-clipboard" title="Copiar al portapapeles" onclick="copyToDashboard()">
+                    <img class="copy-icon" src="img/copy-icon.webp">
+                </button>
+            </div>
+        </main>
+
+        <script src="js/script.js"></script>
+
+        <footer>
+            <div class="footer-1">
+                <h1>Desarrollado por</h1>
+                <div class="developer-container">
+                    <img class="naegleria-logo" src="img/naegleria-logo.webp">
+                    <p>NaegleriaFR</p>
+                </div>
+            
+                <div class="footer-1-nav">
+                    <nav>
+                        <ul>
+                            <li>
+                                <div class="contacto-url">
+                                    <a href="https://www.linkedin.com/in/rubenv-sd/" target="_blank" rel="noopener noreferrer">
+                                        <img class="linkedin-logo" src="img/linkedin-logo.webp">
+                                        <p>Contacto</p>                                
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="donation-url">
+                                    <a href="https://account.skrill.com/wallet/ng/send-money/recipient" target="_blank" rel="noopener noreferrer">
+                                        <img class="skrill-logo" src="img/skrill-logo.webp">
+                                        <p>donacionesnaegleriafr@outlook.com</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+               
+            </div>
+           
+            <div class="footer-2">
+                <h1>Agradecimientos</h1>
+                <nav>
+                    <ul>
+                        <div class="acknowlements-urls">
+                            <li>
+                                <a href="https://www.aluracursos.com/?gclid=Cj0KCQjwpPKiBhDvARIsACn-gzD_bCT4czpOLVh_TqbJceezgxmY-jPpXAF7fKL06yAHBXhfifxaUJIaAqv1EALw_wcB" target="_blank" rel="noopener noreferrer">
+                                    <img class="alura-logo" src="img/alura-logo.webp">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.oracle.com/pe/education/oracle-next-education/" target="_blank" rel="noopener noreferrer">
+                                    <img class="one-logo" src="img/one-logo.webp">
+                                </a>
+                            </li>
+                        </div>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="copyright">
+                <p>&copy Copyright NaegleriaFR - 2023</p>
+            </div>
+                
+        </footer>
+    </body>
+</html>
